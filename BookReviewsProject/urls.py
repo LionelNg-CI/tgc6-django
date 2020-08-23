@@ -20,6 +20,10 @@ import reviews.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('reviews/', reviews.views.index),
     path('books/', books.views.index),
-    path('reviews/', reviews.views.index)
+    path('authors/', books.views.authors),
+    path('books/create', books.views.create_book),
+    path('books/create/author', books.views.create_author),
+    path('books/update/<book_id>', books.views.update_book)
 ]
